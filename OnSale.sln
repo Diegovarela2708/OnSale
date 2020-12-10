@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnSale.Common", "OnSale.Common\OnSale.Common.csproj", "{7B6E635C-6835-4C83-80FD-93C71706B3FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnSale.Web", "OnSale.Web\OnSale.Web.csproj", "{6600EE03-CDF2-4BB7-ABAC-B679718A0CBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B6E635C-6835-4C83-80FD-93C71706B3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6E635C-6835-4C83-80FD-93C71706B3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6E635C-6835-4C83-80FD-93C71706B3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6E635C-6835-4C83-80FD-93C71706B3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6600EE03-CDF2-4BB7-ABAC-B679718A0CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6600EE03-CDF2-4BB7-ABAC-B679718A0CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6600EE03-CDF2-4BB7-ABAC-B679718A0CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6600EE03-CDF2-4BB7-ABAC-B679718A0CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7155CFE0-F88A-4E91-9E00-C3E5CB3A0C2C}
+	EndGlobalSection
+EndGlobal
