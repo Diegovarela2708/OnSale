@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using OnSale.Common.Entities;
+using OnSale.Common.Enums;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnSale.Web.Data
+namespace OnSale.Web.Data.Entities
 {
     public class User : IdentityUser
     {
