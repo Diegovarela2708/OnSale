@@ -8,6 +8,11 @@ using OnSale.Web.Models;
 using OnSale.Common.Requests;
 using System.Net;
 using System.Threading.Tasks;
+using System;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace OnSale.Web.Controllers.API
 {

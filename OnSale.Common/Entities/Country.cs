@@ -17,6 +17,5 @@ namespace OnSale.Common.Entities
 
         [DisplayName("Departments Number")]
         public int DepartmentsNumber => Departments == null ? 0 : Departments.Count;
-
     }
 }
