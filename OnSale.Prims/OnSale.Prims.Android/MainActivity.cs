@@ -4,6 +4,7 @@ using Android.OS;
 using Prism;
 using Prism.Ioc;
 using Syncfusion.SfBusyIndicator.XForms.Droid;
+using Syncfusion.SfRotator.XForms.Droid;
 
 namespace OnSale.Prims.Droid
 {
@@ -21,6 +22,7 @@ namespace OnSale.Prims.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             new SfBusyIndicatorRenderer();
+            new SfRotatorRenderer();
             LoadApplication(new App(new AndroidInitializer()));
         }
 
