@@ -1,6 +1,7 @@
 ﻿using OnSale.Common.Entities;
 using OnSale.Common.Responses;
 using OnSale.Common.Services;
+using OnSale.Prims.ItemViewModels;
 using Prism.Commands;
 using Prism.Navigation;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace OnSale.Prims.ViewModels
     {
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
-        private ObservableCollection<Product> _products;
+        private ObservableCollection<ProductItemViewModel> _products;
         private bool _isRunning;
         private string _search;
         private List<Product> _myProducts;
@@ -46,7 +47,7 @@ namespace OnSale.Prims.ViewModels
             set => SetProperty(ref _isRunning, value);
         }
 
-        public ObservableCollection<Product> Products
+        public ObservableCollection<ProductItemViewModel> Products
         {
             get => _products;
             set => SetProperty(ref _products, value);
@@ -81,14 +82,37 @@ namespace OnSale.Prims.ViewModels
         {
             if (string.IsNullOrEmpty(Search))
             {
-                Products = new ObservableCollection<Product>(_myProducts);
+                Products = new ObservableCollection<ProductItemViewModel>(_myProducts.Select(p => new ProductItemViewModel(_navigationService)
+                {
+                    Category = p.Category,
+                    Description = p.Description,
+                    Id = p.Id,
+                    IsActive = p.IsActive,
+                    IsStarred = p.IsStarred,
+                    Name = p.Name,
+                    Price = p.Price,
+                    ProductImages = p.ProductImages
+                })
+                    .ToList());
             }
             else
             {
-                Products = new ObservableCollection<Product>(_myProducts
-                    .Where(p => p.Name.ToLower().Contains(Search.ToLower())));
+                Products = new ObservableCollection<ProductItemViewModel>(_myProducts.Select(p => new ProductItemViewModel(_navigationService)
+                {
+                    Category = p.Category,
+                    Description = p.Description,
+                    Id = p.Id,
+                    IsActive = p.IsActive,
+                    IsStarred = p.IsStarred,
+                    Name = p.Name,
+                    Price = p.Price,
+                    ProductImages = p.ProductImages
+                })
+                    .Where(p => p.Name.ToLower().Contains(Search.ToLower()))
+                    .ToList());
             }
         }
+
 
     }
 
